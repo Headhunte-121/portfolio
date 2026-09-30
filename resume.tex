@@ -1,0 +1,163 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Nikhil Gavel
+% Based on: Jake's Resume (ATS-Optimized Single Column)
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Nikhil Gavel} \\ \vspace{2pt}
+    \small Durg, Chhattisgarh, India $|$ \href{mailto:nikhilgavel2202@gmail.com}{\underline{nikhilgavel2202@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/nikhil-gavel}{\underline{linkedin.com/in/nikhil-gavel}} $|$
+    \href{https://github.com/Headhunte-121}{\underline{github.com/Headhunte-121}} $|$
+    \href{https://codeforces.com/profile/headhunter121}{\underline{codeforces.com/profile/headhunter121}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {International Institute of Information Technology, Naya Raipur}{Naya Raipur, India}
+      {Bachelor of Technology in Computer Science and Engineering}{Aug 2026 -- May 2030}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Programming with C, Data Structures \& Algorithms, Linear Algebra \& Matrix Analysis, Calculus, Digital Electronics (Verilog), Internet of Things (IoT).}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Sri Sankara Vidyalaya (CBSE)}{Bhilai, India}
+      {Class XII (Senior Secondary) -- \textbf{91.6\%} $|$ Class X (Secondary) -- \textbf{94.0\%}}{2023 -- 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Key Academic Highlights:} Scored \textbf{100/100 in Informatics Practices}, \textbf{95 in Mathematics}, and \textbf{93 in Physics} (Class XII).}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills \& Core Strengths}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{AI-Assisted Engineering (Core Strength)}{: Directing AI coding agents for rapid end-to-end development, translating project requirements into structured prompts, environment setup, debugging/refactoring AI-generated code, and iterative code review.} \\
+     \textbf{Testing \& Quality Assurance}{: Manual Testing, Functional \& Exploratory Testing, Defect Tracking, Boundary-Value Analysis, Automated Testing (\texttt{pytest}), Defect Triage (EPAM/test IO).} \\
+     \textbf{Languages \& Databases}{: C, Python, SQL (Proficient); C++, JavaScript, Bash (Basics); SQLite (WAL Mode), PostgreSQL.} \\
+     \textbf{Tools \& Environments}{: Git, Docker Compose, Linux/Unix, FastAPI, React, Tauri v2, VS Code.}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {test IO (EPAM Systems)}{Remote}
+      {Freelance QA Tester}{Jan 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Conducted functional and exploratory manual testing across web and mobile platforms, validating user journeys and responsive layouts on physical devices.}
+        \resumeItem{Earned a \textbf{Five-Star Test Cycle Rating (10/10 acceptance)} in one enterprise release cycle; maintained an \textbf{85\% overall defect-approval rate (11/13)} across 3 active test cycles.}
+        \resumeItem{Reported customer-approved defects including broken navigation links, mobile UI misalignments, and form validation bypasses.}
+        \resumeItem{Authored detailed bug reports with step-by-step reproduction steps, device environment details, and verified peer bug reproductions.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{WatchMark -- Desktop Media Organizer \& VLC Companion} $|$ \emph{Tauri v2, Rust, React 19} $|$ \href{https://github.com/Headhunte-121/timestampet}{\underline{GitHub}}}{Sep 2026}
+          \resumeItemListStart
+            \resumeItem{\textbf{System Architecture \& AI Direction:} Designed the modular architecture and directed AI coding agents to build a 20,000+ LOC native Windows desktop media tracker in Rust (Tauri v2) and React 19, benchmarked at \textbf{15.1 MB idle RAM} and \textbf{0.0\% CPU}.}
+            \resumeItem{\textbf{Directed TMDb Integration:} Specified and guided AI agent implementation of \textbf{The Movie Database (TMDb) API} pipeline to parse local video files, resolve titles, and automatically structure rich metadata, artwork, and episode overviews into an organized offline library.}
+            \resumeItem{\textbf{Architected Telemetry Bridge:} Designed a zero-daemon VLC watch-tracking supervisor and directed AI implementation of local loopback HTTP polling to sync playback timestamps and mark completed episodes with zero background battery drain.}
+            \resumeItem{\textbf{Specified Local Storage \& Streaming:} Guided AI construction of an offline-first SQLite WAL database with automated local backups, and directed the design of a custom 1MB chunked Range streaming protocol for instantaneous in-app playback without RAM bloat.}
+            \resumeItem{\textbf{Code Auditing \& Hardware QA:} Audited AI-generated code to catch and reject lazy shortcuts (e.g., stopping whole-file RAM buffering; enforcing real error handling); profiled live builds on physical hardware to resolve a \textbf{70.3\% WebView2 idle GPU leak} down to \textbf{0.0\%}.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------HONORS & COMPETITIVE PROGRAMMING-----------
+\section{Achievements \& Extracurriculars}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Competitive Programming \& DSA}{: Solved \textbf{130+ problems} across GeeksforGeeks, LeetCode, and Codeforces in C/C++.} \\
+     \textbf{THINQ 2024 (Indian Navy Quiz)}{: \textbf{National Semifinalist (Top 16)} representing Sri Sankara Vidyalaya out of \textbf{12,600+ participating school teams across 3,800 cities}; competed at the Indian Naval Academy (INA Ezhimala).}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
