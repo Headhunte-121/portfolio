@@ -47,7 +47,7 @@ You can host this permanently for free on GitHub Pages at `https://headhunte-121
 ## 🎨 Features & Architecture
 * **Dark Modern Aesthetic:** Ambient blurred gradient orbs, glassmorphic floating pill navbar with active scrollspy, and clean typography.
 * **Grounded Hero:** Status badge (`IIIT Naya Raipur • CSE '30`), direct call-to-actions, and honest metrics (5-Star QA, WatchMark 15.1 MB RAM, Top 16 National Semifinalist).
-* **Featured Flagship Project:** Showcases WatchMark desktop media diary (15.1 MB idle RAM, 0.0% CPU, Tauri v2 + Rust, 6 decoupled subsystems, and custom Range streaming protocol).
+* **Featured Flagship Project:** Showcases WatchMark desktop media organizer (15.1 MB idle RAM, 0.0% CPU, Tauri v2 + Rust, TMDb API metadata sync, zero-daemon VLC watch tracking, and local-first SQLite).
 * **How I Build With AI:** A pragmatic 4-step workflow: planning architecture & specs, managing AI context to avoid drift, auditing code completion, and hands-on hardware testing.
 * **Categorized Skills Matrix:** Honest, tiered categories (AI-Assisted Development & QA, Strong Foundations in C & Data Structures, Working Knowledge, and Applied Frameworks).
 * **Dedicated Experience, Education & Achievements Sections:** Clean separation between commercial work experience (test IO / EPAM Systems), academic background (IIIT Naya Raipur B.Tech CSE), and national honors (Indian Navy THINQ 2024 Top 16 & Competitive Programming).

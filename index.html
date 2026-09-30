@@ -161,73 +161,52 @@
                 <div class="stacked-project-card">
                     <div class="card-text-side">
                         <div class="card-meta">
-                            <span class="badge-accent">FEATURED • DESKTOP SYSTEM</span>
-                            <span class="badge-sub">Tauri v2 • Rust (Tokio) • React 19 • SQLite</span>
+                            <span class="badge-accent">FEATURED • DESKTOP APP</span>
+                            <span class="badge-sub">Tauri v2 • Rust • React 19 • TMDb API • SQLite</span>
                         </div>
                         <h3 class="card-title">WatchMark</h3>
                         <div class="project-why-quote">
-                            "I kept losing my place across anime and lecture backlogs without wanting a heavy 24/7 media
-                            server (Plex/Jellyfin), so I designed and directed the build of a zero-daemon local
-                            tracker."
+                            "I wanted a clean, lightweight personal media tracker that organizes local videos with TMDb metadata and auto-syncs with VLC—without running heavy, bloated background servers like Plex."
                         </div>
                         <p class="card-summary">
-                            A fast, native desktop media diary and VLC companion for Windows, built using an
-                            AI-augmented development workflow. Connects to VLC via loopback HTTP to track viewing
-                            history and timestamps with zero background daemons, 0.0% idle CPU, and a tiny 15.1 MB RAM
-                            footprint across 6 decoupled subsystems:
+                            A fast, native Windows desktop media organizer and VLC companion. Point it to your local video library, and WatchMark automatically fetches TMDb metadata, structures seasons and episodes, and tracks your exact watch progress through VLC in real-time—all with zero background daemons, 0.0% idle CPU, and a tiny 15.1 MB RAM footprint:
                         </p>
 
                         <div class="subsystems-grid">
                             <div class="subsystem-item">
-                                <span class="subsystem-title">Custom Streaming Protocol
-                                    (<code>watchmark://</code>)</span>
-                                <p>Native async URI scheme implementing HTTP Range header parsing and 1MB chunked
-                                    streaming to bypass WebView2 local sandbox constraints without RAM bloat.</p>
+                                <span class="subsystem-title">TMDb Metadata &amp; Library Sync</span>
+                                <p>Integrates with The Movie Database (TMDb) API to automatically match local files with official titles, artwork, episode overviews, and release dates into an organized library.</p>
                             </div>
                             <div class="subsystem-item">
-                                <span class="subsystem-title">Multi-Threaded Ingestion &amp; Triage</span>
-                                <p>Recursive <code>walkdir</code> scanner parsing release tags
-                                    (<code>clean_anime_release_tags</code>, <code>x264</code>, <code>1080p</code>),
-                                    Windows long paths (<code>\\?\</code>), and Win32 handle IDs into an interactive
-                                    triage inbox.</p>
+                                <span class="subsystem-title">Zero-Daemon VLC Watch Tracking</span>
+                                <p>Connects to VLC via local HTTP loopback to automatically log timestamps and mark completed episodes, without running heavy background services or draining battery.</p>
                             </div>
                             <div class="subsystem-item">
-                                <span class="subsystem-title">Zero-Daemon VLC Telemetry</span>
-                                <p>Tokio async supervisor with dynamic port probing (8080..8090), 16-char cryptographic
-                                    auth, and &gt;90% completion latching with 0.0% background CPU.</p>
+                                <span class="subsystem-title">Ultra-Lightweight Rust Architecture</span>
+                                <p>Built with Tauri v2 and Rust instead of memory-heavy Electron wrappers, running smoothly at just 15.1 MB RAM and opening instantly.</p>
                             </div>
                             <div class="subsystem-item">
-                                <span class="subsystem-title">Dual-Channel MPSC Task Queue</span>
-                                <p>Dedicated worker thread prioritizing UI operations over background sweeps
-                                    (<code>high_priority_tx</code> / <code>low_priority_tx</code>), preventing SQLite
-                                    concurrency deadlocks.</p>
+                                <span class="subsystem-title">Local-First SQLite Database</span>
+                                <p>Keeps all viewing history, notes, and library data 100% private and offline on your machine with automated WAL mode backups and zero cloud lock-in.</p>
                             </div>
                             <div class="subsystem-item">
-                                <span class="subsystem-title">Transactional Cold-Swap Restore</span>
-                                <p>SQLite WAL mode with <code>PRAGMA optimize</code>, 3-backup SHA-256 rolling
-                                    retention, and transactional <code>.pending</code> &rarr; active database cold-swaps
-                                    with automatic rollback.</p>
+                                <span class="subsystem-title">Smooth 60 FPS Grid Windowing</span>
+                                <p>Virtualizes UI rendering so browsing collections of 1,000+ titles stays fluid at 60 FPS; profiled and fixed a 70.3% idle GPU compositor leak down to 0.0%.</p>
                             </div>
                             <div class="subsystem-item">
-                                <span class="subsystem-title">DOM Virtualization &amp; GPU Profiling</span>
-                                <p><code>VirtualPoster</code> <code>IntersectionObserver</code> windowing maintaining 60
-                                    FPS across 1,000+ titles; profiled and eliminated a 70.3% idle GPU compositor leak
-                                    in WebView2 down to 0.0%.</p>
+                                <span class="subsystem-title">Custom Local Video Streaming</span>
+                                <p>Streams local files into the app using a lightweight 1MB chunked Range protocol, keeping video playback instant without loading large files into memory.</p>
                             </div>
                         </div>
 
                         <div class="card-stats-row">
                             <div class="stat-pill"><span class="text-cyan">15.1 MB</span> Idle RAM Footprint</div>
                             <div class="stat-pill"><span class="text-purple">0.0%</span> Background CPU</div>
-                            <div class="stat-pill"><span class="text-emerald">&lt; 50 MB</span> 1,000+ Titles Scrolled
-                            </div>
-                            <div class="stat-pill"><span class="text-orange">~20k LOC</span> 6 Subsystems</div>
+                            <div class="stat-pill"><span class="text-emerald">TMDb API</span> Rich Metadata</div>
+                            <div class="stat-pill"><span class="text-orange">Local-First</span> 100% Offline SQLite</div>
                         </div>
                         <div class="card-tags">
-                            <span>Tauri v2</span><span>Rust</span><span>Tokio Async</span><span>React
-                                19</span><span>TypeScript</span><span>SQLite WAL</span><span>Custom URI
-                                Protocol</span><span>Win32 API</span><span>Regex Ingestion</span><span>VLC
-                                Telemetry</span><span>Hardware Profiling</span>
+                            <span>Tauri v2</span><span>Rust</span><span>React 19</span><span>TypeScript</span><span>TMDb API</span><span>SQLite WAL</span><span>VLC Telemetry</span><span>Hardware Profiling</span>
                         </div>
                         <div class="card-actions">
                             <a href="https://github.com/Headhunte-121/timestampet/releases" target="_blank"
@@ -264,13 +243,13 @@
                             <div class="mockup-terminal">
                                 <div class="term-row"><span class="term-prompt">❯</span> <span class="term-cmd">watchmark-core --profile --stats</span></div>
                                 <div class="term-row term-info"><span class="term-prefix">[SYSTEM]</span> <span class="term-val">Tauri v2 + Rust Core initialized</span></div>
-                                <div class="term-row term-info"><span class="term-prefix">[IPC]</span> <span class="term-val">Win32 loopback probe (ports 8080..8090)</span> <span class="term-ok">OK</span></div>
+                                <div class="term-row term-info"><span class="term-prefix">[TMDB-API]</span> <span class="term-val">Metadata engine connected • Local cache sync</span> <span class="term-ok">OK</span></div>
                                 <div class="term-row term-info"><span class="term-prefix">[VLC-BRIDGE]</span> <span class="term-val">Zero-daemon telemetry connected (PID: 14820)</span></div>
-                                <div class="term-row term-info"><span class="term-prefix">[STORAGE]</span> <span class="term-val">SQLite WAL mode with PRAGMA optimize</span></div>
+                                <div class="term-row term-info"><span class="term-prefix">[STORAGE]</span> <span class="term-val">Local SQLite WAL mode (zero cloud lock-in)</span></div>
                                 <div class="term-row term-info"><span class="term-prefix">[STREAM]</span> <span class="term-val">watchmark:// registered • 1MB Range chunks</span></div>
                                 <div class="term-row term-info"><span class="term-prefix">[METRICS]</span> <span class="term-val">Idle RAM:</span> <span class="term-ok">15.1 MB</span> | <span class="term-val">Idle CPU:</span> <span class="term-ok">0.0%</span></div>
                                 <div class="term-row term-info"><span class="term-prefix">[COMPOSITOR]</span> <span class="term-val">WebView2 GPU leak:</span> <span class="term-ok">0.0%</span> <span class="term-sub">(profiled down from 70.3%)</span></div>
-                                <div class="term-row term-success"><span class="term-prompt">✔</span> <span class="term-val">6 decoupled subsystems verified on hardware</span></div>
+                                <div class="term-row term-success"><span class="term-prompt">✔</span> <span class="term-val">All systems verified • Zero background daemons</span></div>
                             </div>
                             <div class="mockup-caption">
                                 <span class="mockup-caption-tag">● Hardware &amp; Systems Telemetry</span>
@@ -315,8 +294,9 @@
                     </p>
                     <div class="pipeline-example-box">
                         <span class="pipeline-example-label">In WatchMark</span>
-                        <p>Broke down the 64-feature application into distinct modules (windowing, SQLite database, VLC
-                            telemetry, and frontend UI) so each part could be built and tested independently.</p>
+                        <p>Broke down the application into distinct modular services (TMDb metadata client, SQLite
+                            storage, VLC loopback bridge, and React frontend) so each part could be built and tested
+                            independently.</p>
                     </div>
                 </div>
 
